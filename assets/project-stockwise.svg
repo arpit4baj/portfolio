@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="608" viewBox="0 0 1024 608" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1024" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08172D"/>
+      <stop offset="1" stop-color="#11102C"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#142C49"/>
+      <stop offset="1" stop-color="#101B35"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#51D8E8"/>
+      <stop offset="1" stop-color="#8A78F6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1024v608H0z"/>
+  <g opacity=".18" stroke="#52CDE0" stroke-width="1">
+    <path d="M0 92h1024M0 420h1024M76 0v512M948 0v512"/>
+    <path d="M36 0v64m18-64v44m18-44v75m18-75v37m18-37v55m806-55v52m18-52v70m18-70v43m18-43v58m18-58v36"/>
+  </g>
+  <g transform="translate(0 48)">
+  <text x="40" y="52" fill="#F6FAFF" font-family="Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1.5">STOCKWISE</text>
+  <text x="982" y="50" text-anchor="end" fill="#69DCE8" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2">INVENTORY INTELLIGENCE</text>
+
+  <g>
+    <rect x="34" y="93" width="278" height="334" rx="14" fill="url(#panel)" stroke="#4BBDE0" stroke-width="2"/>
+    <text x="56" y="126" fill="#C5F5FF" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1">STOCKOUT RISK</text>
+    <text x="56" y="157" fill="#AABBD1" font-family="Arial,sans-serif" font-size="13">Products needing attention</text>
+    <path d="M62 294c24-13 34-20 58-19s29-35 52-31 31-23 51-22 31-39 60-49" stroke="#5CD8E8" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M62 294c24-13 34-20 58-19s29-35 52-31 31-23 51-22 31-39 60-49v135H62z" fill="#44CFE4" fill-opacity=".09"/>
+    <path d="M62 320h222M62 270h222M62 220h222M62 170h222" stroke="#7894AE" stroke-opacity=".22"/>
+    <circle cx="230" cy="222" r="6" fill="#FFB86A"/>
+    <circle cx="282" cy="173" r="6" fill="#FF708B"/>
+    <rect x="58" y="351" width="228" height="49" rx="8" fill="#261D37" stroke="#F17B8D" stroke-opacity=".7"/>
+    <circle cx="79" cy="375" r="7" fill="#FF7187"/>
+    <text x="96" y="380" fill="#FFE3E7" font-family="Arial,sans-serif" font-size="14" font-weight="700">LOW STOCK ALERT</text>
+  </g>
+
+  <g>
+    <circle cx="512" cy="264" r="153" fill="#101D3B" stroke="#4D6BA6" stroke-width="2"/>
+    <circle cx="512" cy="264" r="136" stroke="url(#accent)" stroke-width="7" stroke-dasharray="270 32 125 28" filter="url(#glow)"/>
+    <circle cx="512" cy="264" r="113" stroke="#42CDE2" stroke-opacity=".3" stroke-width="1.5"/>
+    <text x="512" y="156" text-anchor="middle" fill="#9DB4D0" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">DEMAND + INVENTORY</text>
+    <g stroke="#78D7E5" stroke-width="4" stroke-linejoin="round">
+      <path d="M439 205h52v49h-52zM500 205h52v49h-52zM561 205h33v49h-33z"/>
+      <path d="m439 205 26-18 26 18m9 0 26-18 26 18m9 0 16-12 17 12" fill="#43BFD2" fill-opacity=".2"/>
+      <path d="M439 263h52v49h-52zM500 263h52v49h-52zM561 263h33v49h-33z"/>
+      <path d="m439 263 26-18 26 18m9 0 26-18 26 18m9 0 16-12 17 12" fill="#8678E8" fill-opacity=".2"/>
+    </g>
+    <text x="512" y="345" text-anchor="middle" fill="#F6FAFF" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1">STOCKOUT RISK MODEL</text>
+    <text x="512" y="369" text-anchor="middle" fill="#8EA6C3" font-family="Arial,sans-serif" font-size="13">CUSTOM LOGISTIC REGRESSION</text>
+  </g>
+
+  <g>
+    <rect x="712" y="93" width="278" height="334" rx="14" fill="url(#panel)" stroke="#A47BEC" stroke-width="2"/>
+    <text x="736" y="126" fill="#E6D8FF" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1">INVENTORY HEALTH</text>
+    <text x="736" y="157" fill="#AABBD1" font-family="Arial,sans-serif" font-size="13">Stock coverage by product</text>
+    <g font-family="Arial,sans-serif" font-size="12" fill="#C1CEE0">
+      <text x="736" y="199">Product A</text><text x="736" y="245">Product B</text><text x="736" y="291">Product C</text><text x="736" y="337">Product D</text>
+    </g>
+    <g>
+      <rect x="817" y="184" width="145" height="13" rx="6" fill="#27344D"/><rect x="817" y="184" width="118" height="13" rx="6" fill="#55D6B2"/>
+      <rect x="817" y="230" width="145" height="13" rx="6" fill="#27344D"/><rect x="817" y="230" width="68" height="13" rx="6" fill="#F4BB63"/>
+      <rect x="817" y="276" width="145" height="13" rx="6" fill="#27344D"/><rect x="817" y="276" width="42" height="13" rx="6" fill="#FF7187"/>
+      <rect x="817" y="322" width="145" height="13" rx="6" fill="#27344D"/><rect x="817" y="322" width="98" height="13" rx="6" fill="#55D6B2"/>
+    </g>
+    <rect x="736" y="365" width="230" height="37" rx="7" fill="#192943" stroke="#A47BEC" stroke-opacity=".65"/>
+    <text x="851" y="389" text-anchor="middle" fill="#E6D8FF" font-family="Arial,sans-serif" font-size="13" font-weight="700">UPLOAD CSV  ·  ANALYZE  ·  EXPORT</text>
+  </g>
+  <path d="M312 258h44m312 0h44" stroke="#55D6E4" stroke-width="2" stroke-dasharray="5 7"/>
+  <circle cx="334" cy="258" r="4" fill="#55D6E4"/>
+  <circle cx="690" cy="258" r="4" fill="#55D6E4"/>
+  <text x="512" y="481" text-anchor="middle" fill="#758CA9" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">SALES SIGNALS  ·  STOCK PRESSURE  ·  RISK INSIGHTS</text>
+  </g>
+</svg>

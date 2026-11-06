@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Atmospheric Haze Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5e8"/>
+      <stop offset="40%" stop-color="#faebd4"/>
+      <stop offset="75%" stop-color="#edd6b8"/>
+      <stop offset="100%" stop-color="#dfcaa6"/>
+    </linearGradient>
+
+    <!-- Mountain Layer Gradients (Distant to Near) -->
+    <linearGradient id="ridgeDistant" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dccab1"/>
+      <stop offset="100%" stop-color="#cbb497"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeMidFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bda282"/>
+      <stop offset="100%" stop-color="#a48764"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#967958"/>
+      <stop offset="100%" stop-color="#7a5f3f"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeForeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#695135"/>
+      <stop offset="60%" stop-color="#4e3b24"/>
+      <stop offset="100%" stop-color="#382917"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeForeRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#55422c"/>
+      <stop offset="40%" stop-color="#3e2e1c"/>
+      <stop offset="100%" stop-color="#241a0e"/>
+    </linearGradient>
+
+    <linearGradient id="sunLightBeam" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#ffd59e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#dfcaa6" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="hazeBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Subtle Sun Light Rays / Morning Beams -->
+  <polygon points="120,0 280,0 480,380 260,380" fill="url(#sunLightBeam)"/>
+  <polygon points="320,0 460,0 680,420 500,420" fill="url(#sunLightBeam)"/>
+
+  <!-- Layer 1: Most Distant Mountain Silhouettes -->
+  <path d="M 0,340 
+           C 60,335 110,325 180,328 
+           C 250,332 310,342 380,336 
+           C 440,330 520,312 600,316 
+           C 680,320 740,332 800,326 
+           L 800,600 L 0,600 Z" 
+        fill="url(#ridgeDistant)" opacity="0.6"/>
+
+  <!-- Layer 2: Distant Ridge Peaks -->
+  <path d="M 0,365 
+           C 70,358 130,342 190,346 
+           C 260,350 320,366 390,358 
+           C 470,348 540,330 620,336 
+           C 690,342 750,355 800,348 
+           L 800,600 L 0,600 Z" 
+        fill="url(#ridgeDistant)"/>
+
+  <!-- Atmospheric mist band between layers -->
+  <rect x="0" y="340" width="800" height="35" fill="#f7ebd9" opacity="0.45" filter="url(#hazeBlur)"/>
+
+  <!-- Layer 3: Mid-distance Layered Ridges -->
+  <path d="M 0,400 
+           C 50,392 120,378 190,382 
+           C 270,386 340,405 420,396 
+           C 510,385 590,365 670,372 
+           C 730,378 770,388 800,384 
+           L 800,600 L 0,600 Z" 
+        fill="url(#ridgeMidFar)"/>
+
+  <!-- Another delicate mist line -->
+  <rect x="0" y="385" width="800" height="25" fill="#edd8be" opacity="0.4" filter="url(#hazeBlur)"/>
+
+  <!-- Layer 4: Deep Midground Ridge -->
+  <path d="M 0,445 
+           C 80,435 160,420 240,425 
+           C 330,432 400,455 490,442 
+           C 580,428 660,405 740,412 
+           C 770,415 790,420 800,418 
+           L 800,600 L 0,600 Z" 
+        fill="url(#ridgeMid)"/>
+
+  <!-- Layer 5: Strong Sloping Left-to-Center Ridge Trail (as in Screenshot 3) -->
+  <path d="M 0,480 
+           C 70,470 140,460 210,462 
+           C 280,465 350,478 420,465 
+           C 490,450 560,425 640,432 
+           C 710,438 760,452 800,445 
+           L 800,600 L 0,600 Z" 
+        fill="url(#ridgeForeLeft)" opacity="0.85"/>
+
+  <!-- Layer 6: Main Foreground Spine & Hiking Trail Ridge (Leading from center-right downwards) -->
+  <!-- Back slope of the foreground ridge -->
+  <path d="M 0,600 L 0,530 
+           C 80,510 170,490 270,505 
+           C 350,518 410,505 460,480 
+           C 485,468 505,452 525,438 
+           C 545,465 600,505 680,535 
+           C 730,555 770,570 800,580 
+           L 800,600 Z" 
+        fill="url(#ridgeForeRight)"/>
+
+  <!-- Sharp Sunny Crest / Ridgeline -->
+  <path d="M 270,505 
+           C 350,518 410,505 460,480 
+           C 485,468 505,452 525,438" 
+        stroke="#8a6f4e" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- Winding Path on Crest -->
+  <path d="M 330,515 
+           Q 400,510 450,485 
+           T 525,438" 
+        stroke="#ab916f" stroke-width="2.5" fill="none" stroke-dasharray="8 3" opacity="0.65"/>
+
+  <!-- Solitary Hiker / Walker Silhouette on Ridge Summit (as seen in Screenshot 3) -->
+  <g transform="translate(525, 436)">
+    <!-- Hiker Body -->
+    <!-- Head -->
+    <circle cx="0" cy="-28" r="3.2" fill="#1b1309"/>
+    <!-- Torso with backpack -->
+    <rect x="-2.5" y="-24" width="5.5" height="12" rx="1.5" fill="#1b1309"/>
+    <!-- Backpack on back -->
+    <rect x="-5.5" y="-23" width="3.5" height="8" rx="1" fill="#2d2010"/>
+    <!-- Legs -->
+    <line x1="-1.5" y1="-12" x2="-2.5" y2="0" stroke="#1b1309" stroke-width="2" stroke-linecap="round"/>
+    <line x1="1.5" y1="-12" x2="2.5" y2="0" stroke="#1b1309" stroke-width="2" stroke-linecap="round"/>
+    <!-- Walking staff / pole -->
+    <line x1="4" y1="-20" x2="6" y2="0" stroke="#3b2b18" stroke-width="1.2"/>
+  </g>
+
+  <!-- Warm foreground vignette / texture -->
+  <rect x="0" y="520" width="800" height="80" fill="#181108" opacity="0.3"/>
+</svg>

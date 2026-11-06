@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arpit Bajpai — A Data Journey</title>
+  <meta name="description" content="Portfolio of Arpit Bajpai — Aspiring Data Scientist, Machine Learning Enthusiast, Exploring AI. Every dataset tells a story.">
+
+  <!-- Google Fonts: Newsreader (Editorial Serif), Playfair Display, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">Arpit Bajpai</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#systems" class="nav-link">SYSTEMS</a></li>
+          <li><a href="#journey" class="nav-link">JOURNEY</a></li>
+          <li><a href="#skills" class="nav-link">SKILLS</a></li>
+          <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+          <li><a href="#lab" class="nav-link">LAB</a></li>
+          <li><a href="#playground" class="nav-link">PLAYGROUND</a></li>
+          <li><a href="#resume" class="nav-link">RÉSUMÉ</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- AI Guide Trigger -->
+        <button type="button" class="btn-ai-guide-nav" id="navAiGuideBtn" aria-label="Open AI Assistant Guide">
+          <span class="guide-sparkle">✦</span>
+          <span>AI Guide</span>
+        </button>
+
+        <a href="#modal-resume" class="btn-resume-nav" id="navResumeBtn" data-modal="modal-resume">
+          <svg class="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= 1. HERO SECTION ================= -->
+    <section class="section hero-section" id="hero">
+      <!-- Interactive Constellation Canvas -->
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <!-- Subtle AI System Status Pill -->
+          <div class="ai-status-pill" style="margin-bottom: 1.4rem;">
+            <span class="ai-status-dot"></span>
+            <span>AI System Online &bull; v2.4</span>
+          </div>
+
+          <h1 class="hero-title">
+            I build systems that learn,<br>
+            <span class="hero-title-italic">reason, and automate.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Machine Learning &nbsp;/&nbsp; Generative AI &nbsp;/&nbsp; AI Agents &nbsp;/&nbsp; Automation &nbsp;/&nbsp; Data Science
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-dark" id="heroAskAiBtn">
+              <span class="guide-sparkle" style="color: #e5c38c; margin-right: 0.25rem;">✦</span>
+              <span>Ask my AI &rarr;</span>
+            </button>
+
+            <a href="#projects" class="btn btn-outline" id="heroProjectsBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>View projects</span>
+            </a>
+
+            <a href="#modal-resume" class="btn btn-outline" id="heroDownloadBtn" data-modal="modal-resume">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Résumé</span>
+            </a>
+          </div>
+
+          <!-- Hero Telemetry Highlights -->
+          <div class="hero-telemetry-strip">
+            <div class="telemetry-item">
+              <span class="telemetry-value">10.4k<em>+</em></span>
+              <span class="telemetry-label">Audio Tracks Analyzed</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-value">0.91<em> R²</em></span>
+              <span class="telemetry-label">Spatial Air Model Fit</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-value">87.4<em>%</em></span>
+              <span class="telemetry-label">Recall on Churn Classifier</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-value">Finalist</span>
+              <span class="telemetry-label">India AI Buildathon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-footer">
+          <p class="hero-footer-note">
+            Scroll slowly. This is a story, not a résumé — each section marks a step in a quiet, ongoing journey.
+          </p>
+
+          <a href="#about" class="hero-begin-indicator">
+            <span class="begin-text">BEGIN</span>
+            <span class="begin-bar"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. WHO I AM (ABOUT) ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-text-col">
+            <span class="section-eyebrow">WHO I AM</span>
+            <h2 class="editorial-title">Hi, I'm Arpit Bajpai.</h2>
+
+            <div class="editorial-body">
+              <p>
+                What started as a quiet curiosity about technology slowly grew into a fascination with <em>data</em> — how a column of numbers could explain a person, an ecosystem, or an entire decade of human choices.
+              </p>
+              <p>
+                I am a Computer Science undergraduate at <strong>Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM, Lucknow)</strong>, specializing in applied machine learning, statistical inference, and computational intelligence. Rather than treating machine learning as an opaque black box, I approach every project from first principles: formulating hypotheses, checking distribution assumptions, and auditing models for bias and explainability.
+              </p>
+              <p>
+                I'm drawn to those pivotal moments where raw signal suddenly resolves into understanding — where a multi-table SQL join surfaces an overlooked customer cohort, or an XGBoost residual plot exposes seasonal atmospheric inversions.
+              </p>
+
+              <!-- Three Core Engineering Pillars -->
+              <div class="about-pillars-grid">
+                <div class="about-pillar-card" tabindex="0">
+                  <span class="pillar-num">01 / RIGOR</span>
+                  <h4 class="pillar-title">Empirical Rigor</h4>
+                  <p class="pillar-text">Stratified validation, distribution analysis, and preventing data leakage before modeling.</p>
+                </div>
+                <div class="about-pillar-card" tabindex="0">
+                  <span class="pillar-num">02 / XAI</span>
+                  <h4 class="pillar-title">Interpretability</h4>
+                  <p class="pillar-text">Demystifying decision boundaries with SHAP values, partial dependence, and feature importance.</p>
+                </div>
+                <div class="about-pillar-card"
+                  <span class="pillar-num">03 / CRAFT</span>
+                  <h4 class="pillar-title">End-to-End Craft</h4>
+                  <p class="pillar-text">From raw ingestion and feature engineering to deployment, automation, and clear visual narratives.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="editorial-media-col">
+            <div class="image-frame portrait-frame">
+              <img src="assets/portrait.jpg" alt="Portrait of Arpit Bajpai" class="framed-image">
+            </div>
+
+            <!-- Quick Facts Card -->
+            <div class="about-facts-box" style="width: 100%; max-width: 440px;">
+              <span class="facts-title">Snapshot &amp; Focus</span>
+              <ul class="facts-list">
+                <li><strong>Current Status:</strong> B.Tech CSE (Expected 2028) &bull; SRMCEM</li>
+                <li><strong>Core Focus:</strong> Applied ML, Time-Series &amp; Statistical Inference</li>
+                <li><strong>Emerging AI:</strong> LLM Prompt Engineering, RAG &amp; n8n Agent Loops</li>
+                <li><strong>Location:</strong> Lucknow, Uttar Pradesh, India</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SYSTEMS I BUILD ================= -->
+    <section class="section systems-section" id="systems">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AREAS OF ENGINEERING</span>
+          <h2 class="editorial-title">Systems I build.</h2>
+          <p class="section-lead-text">
+            Bridging statistical inference, agentic reasoning, and workflow automation. Five domains where I design, benchmark, and deploy intelligent software.
+          </p>
+        </div>
+
+        <div class="systems-grid">
+          <!-- System 1: Machine Learning -->
+          <div class="system-card" tabindex="0">
+            <div class="system-card-top">
+              <span class="system-num">01 / PREDICTIVE MODELING</span>
+              <h3 class="system-card-title">Machine Learning</h3>
+              <span class="system-arch-tagline">Data &rarr; Feature Pipeline &rarr; Ensemble &rarr; SHAP</span>
+              <p class="system-card-desc">
+                Predictive systems built from structured and tabular data. Rigorous cross-validation, cost-sensitive threshold optimization, and transparent explainability over black-box guesses.
+              </p>
+            </div>
+            <div class="system-tools-row">
+              <span class="system-tool-badge">Scikit-Learn</span>
+              <span class="system-tool-badge">LightGBM</span>
+              <span class="system-tool-badge">XGBoost</span>
+              <span class="system-tool-badge">SHAP</span>
+              <span class="system-tool-badge">Cross-Validation</span>
+            </div>
+          </div>
+
+          <!-- System 2: Generative AI -->
+          <div class="system-card" tabindex="0">
+            <div class="system-card-top">
+              <span class="system-num">02 / EMBEDDINGS & RETRIEVAL</span>
+              <h3 class="system-card-title">Generative AI</h3>
+              <span class="system-arch-tagline">Corpus &rarr; Chunking &rarr; Dense Vectors &rarr; RAG</span>
+              <p class="system-card-desc">
+                Grounded LLM applications and dense semantic search. Structuring unstructured text into vector spaces to surface timely insights without hallucination.
+              </p>
+            </div>
+            <div class="system-tools-row">
+              <span class="system-tool-badge">BERT</span>
+              <span class="system-tool-badge">Word2Vec</span>
+              <span class="system-tool-badge">Transformers</span>
+              <span class="system-tool-badge">RAG</span>
+              <span class="system-tool-badge">Vector Math</span>
+            </div>
+          </div>
+
+          <!-- System 3: AI Agents -->
+          <div class="system-card" tabindex="0">
+            <div class="system-card-top">
+              <span class="system-num">03 / AUTONOMOUS REASONING</span>
+              <h3 class="system-card-title">AI Agents</h3>
+              <span class="system-arch-tagline">Prompt &rarr; ReAct Loop &rarr; Tool Calling &rarr; Verification</span>
+              <p class="system-card-desc">
+                Systems capable of multi-step reasoning, external tool execution, state memory, and self-correcting error recovery to complete end-to-end tasks.
+              </p>
+            </div>
+            <div class="system-tools-row">
+              <span class="system-tool-badge">LangChain</span>
+              <span class="system-tool-badge">ReAct Framework</span>
+              <span class="system-tool-badge">Tool Calling</span>
+              <span class="system-tool-badge">Memory Buffers</span>
+              <span class="system-tool-badge">Python APIs</span>
+            </div>
+          </div>
+
+          <!-- System 4: AI Automation -->
+          <div class="system-card" tabindex="0">
+            <div class="system-card-top">
+              <span class="system-num">04 / EVENT-DRIVEN WORKFLOWS</span>
+              <h3 class="system-card-title">AI Automation</h3>
+              <span class="system-arch-tagline">Webhook &rarr; n8n Orchestrator &rarr; LLM &rarr; Action Dispatch</span>
+              <p class="system-card-desc">
+                Connecting external services, webhooks, databases, and language models into robust automated pipelines with n8n to eliminate operational friction.
+              </p>
+            </div>
+            <div class="system-tools-row">
+              <span class="system-tool-badge">n8n</span>
+              <span class="system-tool-badge">REST APIs</span>
+              <span class="system-tool-badge">Webhooks</span>
+              <span class="system-tool-badge">PostgreSQL</span>
+              <span class="system-tool-badge">Event Automation</span>
+            </div>
+          </div>
+
+          <!-- System 5: Deep Learning -->
+          <div class="system-card" tabindex="0">
+            <div class="system-card-top">
+              <span class="system-num">05 / REPRESENTATION LEARNING</span>
+              <h3 class="system-card-title">Deep Learning</h3>
+              <span class="system-arch-tagline">Signals &rarr; Dense Embeddings &rarr; Neural Encoders &rarr; Inference</span>
+              <p class="system-card-desc">
+                Neural network architectures for NLP semantic vectors, temporal feature extraction, and high-dimensional clustering across audio and sensor feeds.
+              </p>
+            </div>
+            <div class="system-tools-row">
+              <span class="system-tool-badge">PyTorch</span>
+              <span class="system-tool-badge">TensorFlow</span>
+              <span class="system-tool-badge">PCA & K-Means</span>
+              <span class="system-tool-badge">Time-Series</span>
+              <span class="system-tool-badge">Embeddings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. STORY INTERLUDE: EXPLORATORY ANALYSIS ================= -->
+    <section class="section story-interlude-section" id="story-interlude-1">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-text-col">
+            <h2 class="editorial-title editorial-title-split">
+              Python taught me to build.<br>
+              SQL taught me to ask.
+            </h2>
+
+            <div class="editorial-body">
+              <p class="editorial-lead">
+                Together, they opened a door. Behind it: dashboards, distributions, quiet patterns that had been waiting in plain sight.
+              </p>
+              <p class="editorial-subtext">
+                I started small — a CSV, a notebook, a question. The chart on the right is built the same way every story is: one point at a time.
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-media-col">
+            <div class="image-frame printed-chart-frame">
+              <img src="assets/exploratory-printed.jpg" alt="Printed analytical charts with pencil on wooden desk" class="framed-image">
+            </div>
+            <div class="image-caption">EXPLORATORY ANALYSIS, PRINTED</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. STORY INTERLUDE: MACHINE LEARNING ================= -->
+    <section class="section story-interlude-section ml-interlude-section" id="story-interlude-2">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-text-col">
+            <span class="section-eyebrow">MACHINE LEARNING</span>
+            <h2 class="editorial-title">
+              Systems that learn from what they see.
+            </h2>
+
+            <div class="editorial-body">
+              <p class="editorial-lead">
+                The first time a model I'd trained made a sensible prediction, I felt the same small wonder as a child who'd just balanced a top.
+              </p>
+              <p class="editorial-subtext">
+                A tree splits the world into questions. A cluster finds quiet kinships. A neural network listens, and slowly, learns to recognize.
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-media-col">
+            <div class="image-frame neural-frame">
+              <img src="assets/neural-model.jpg" alt="Physical network model of wooden spheres connected by dark threads" class="framed-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. THE LEARNING JOURNEY (TIMELINE) ================= -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="editorial-grid journey-grid">
+          <div class="editorial-text-col journey-intro-col">
+            <span class="section-eyebrow">THE LEARNING JOURNEY</span>
+            <h2 class="editorial-title">
+              A winding road, walked slowly.
+            </h2>
+
+            <p class="journey-intro-text">
+              The path wasn't straight. It looped, doubled back, paused on small obstacles. Each milestone below is a place I stopped long enough to learn something true.
+            </p>
+          </div>
+
+          <div class="journey-timeline-col">
+            <div class="timeline-track">
+              <!-- Milestone 1 -->
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="milestone-tag">FOUNDATIONS</span>
+                  <h3 class="milestone-title">Algorithmic Thinking &amp; Python</h3>
+                  <p class="milestone-desc">
+                    Started with computer science fundamentals in C++ and Python. Mastered object-oriented programming, data structures (linked lists, trees, graphs, heaps), and computational complexity. Transitioned from simple scripts to clean, modular algorithmic solutions.
+                  </p>
+                  <div class="milestone-pills">
+                    <span class="milestone-pill">Python 3</span>
+                    <span class="milestone-pill">C++</span>
+                    <span class="milestone-pill">OOP Architecture</span>
+                    <span class="milestone-pill">Time Complexity (Big-O)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 2 -->
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="milestone-tag">RELATIONAL SYSTEMS</span>
+                  <h3 class="milestone-title">Asking Questions with SQL</h3>
+                  <p class="milestone-desc">
+                    Learned that the right question matters more than the loudest answer. Explored relational schema design, database normalization, indexing, and advanced query writing using Common Table Expressions (CTEs), multi-table JOINs, and analytic window functions (<code>ROW_NUMBER()</code>, <code>LEAD()</code>, <code>LAG()</code>) to isolate user cohorts.
+                  </p>
+                  <div class="milestone-pills">
+                    <span class="milestone-pill">PostgreSQL</span>
+                    <span class="milestone-pill">Window Functions</span>
+                    <span class="milestone-pill">CTEs</span>
+                    <span class="milestone-pill">Schema Normalization</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 3 -->
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="milestone-tag">DATA WRANGLING</span>
+                  <h3 class="milestone-title">Pipelines, Pandas &amp; Profiling</h3>
+                  <p class="milestone-desc">
+                    Encountered the messy truth of real-world datasets: missing values, mixed encodings, skewed distributions, and temporal irregularities. Developed robust preprocessing pipelines using Pandas and NumPy, integrating iterative imputation, outlier detection (IQR &amp; Z-score), and vectorized transformations.
+                  </p>
+                  <div class="milestone-pills">
+                    <span class="milestone-pill">Pandas</span>
+                    <span class="milestone-pill">NumPy</span>
+                    <span class="milestone-pill">Data Profiling</span>
+                    <span class="milestone-pill">Outlier Detection</span>
+                    <span class="milestone-pill">Vectorization</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 4 -->
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="milestone-tag">MACHINE LEARNING</span>
+                  <h3 class="milestone-title">Supervised Ensembles &amp; Evaluation</h3>
+                  <p class="milestone-desc">
+                    Trained supervised models from decision trees to gradient boosting (LightGBM, XGBoost). Learned the hard lessons of data leakage, target imbalance, and misleading metrics. Mastered stratified k-fold cross-validation, cost-sensitive threshold tuning, and explainable AI through SHAP value decomposition.
+                  </p>
+                  <div class="milestone-pills">
+                    <span class="milestone-pill">Scikit-Learn</span>
+                    <span class="milestone-pill">LightGBM</span>
+                    <span class="milestone-pill">XGBoost</span>
+                    <span class="milestone-pill">SHAP Values</span>
+                    <span class="milestone-pill">Cross-Validation</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone 5 -->
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <span class="milestone-tag">EMERGING HORIZON</span>
+                  <h3 class="milestone-title">AI Agents, RAG &amp; Automation</h3>
+                  <p class="milestone-desc">
+                    Venturing into generative systems, dense vector embeddings, and autonomous tool-augmented LLMs. Building multi-step reasoning chains with LangChain and orchestrating automated event-driven data workflows using n8n to translate raw research into usable intelligence.
+                  </p>
+                  <div class="milestone-pills">
+                    <span class="milestone-pill">LangChain</span>
+                    <span class="milestone-pill">RAG &amp; Embeddings</span>
+                    <span class="milestone-pill">n8n Automation</span>
+                    <span class="milestone-pill">Agentic Tool Use</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Exploring Sub-Block -->
+        <div class="currently-exploring-wrap">
+          <h3 class="exploring-title">Currently Exploring</h3>
+          <div class="exploring-chips-grid">
+            <span class="exploring-chip">&rarr; Agentic AI</span>
+            <span class="exploring-chip">&rarr; RAG Systems</span>
+            <span class="exploring-chip">&rarr; LLM Applications</span>
+            <span class="exploring-chip">&rarr; AI Automation with n8n</span>
+            <span class="exploring-chip">&rarr; AI Agents</span>
+            <span class="exploring-chip">&rarr; Private / Local LLMs</span>
+            <span class="exploring-chip">&rarr; Deep Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. SKILLS: A WORKBENCH, NOT A SCOREBOARD ================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">TOOLS I'VE PICKED UP</span>
+          <h2 class="editorial-title">A workbench, not a scoreboard.</h2>
+          <p class="section-lead-text">
+            These are the instruments I've learned to play, one at a time. Hover or tap a card to read the story behind it.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: DATA -->
+          <div class="skill-card is-active" data-skill="data">
+            <span class="system-num">01 / FOUNDATIONS</span>
+            <h3 class="skill-card-title has-underline">Data</h3>
+            <p class="skill-card-summary">Python &middot; SQL &middot; Pandas &middot; NumPy &middot; Statistics</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">Vectorization</span>
+              <span class="skill-subtag">Window Functions</span>
+              <span class="skill-subtag">Data Imputation</span>
+              <span class="skill-subtag">Hypothesis Testing</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Handling high-cardinality transformations, writing complex CTEs/joins in relational schemas, and auditing distribution assumptions before modeling.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">10,400+ Spotify audio streaming dataset cleaning and multi-station municipal sensor telemetry pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: MACHINE LEARNING -->
+          <div class="skill-card" data-skill="ml">
+            <span class="system-num">02 / PREDICTIVE SYSTEMS</span>
+            <h3 class="skill-card-title has-underline">Machine Learning</h3>
+            <p class="skill-card-summary">Scikit-learn &middot; Feature Engineering &middot; Model Evaluation</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">LightGBM &amp; XGBoost</span>
+              <span class="skill-subtag">Cross-Validation</span>
+              <span class="skill-subtag">Cost Cutoffs</span>
+              <span class="skill-subtag">SHAP Interpretability</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Building resilient classification and regression pipelines, preventing data leakage, and optimizing probability thresholds for real business cost.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">Telecom churn classifier (87.4% recall) and spatial regression for PM2.5 air pollution (0.91 R²).</p>
+            </div>
+          </div>
+
+          <!-- Card 3: DEEP LEARNING -->
+          <div class="skill-card" data-skill="deep-learning">
+            <span class="system-num">03 / REPRESENTATION LEARNING</span>
+            <h3 class="skill-card-title has-underline">Deep Learning</h3>
+            <p class="skill-card-summary">Neural Networks &middot; NLP &middot; High-Dimensional Embeddings</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">Word2Vec</span>
+              <span class="skill-subtag">BERT Transformers</span>
+              <span class="skill-subtag">Dense Vector Math</span>
+              <span class="skill-subtag">PCA Reduction</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Vectorizing high-dimensional features, constructing dense semantic embedding spaces, and analyzing temporal sequential signals.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">Market Discourse financial text sentiment tracking and 5-dimensional audio clustering.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: GENERATIVE AI -->
+          <div class="skill-card" data-skill="genai">
+            <span class="system-num">04 / LANGUAGE & RETRIEVAL</span>
+            <h3 class="skill-card-title has-underline">Generative AI</h3>
+            <p class="skill-card-summary">LLMs &middot; RAG &middot; Embeddings &middot; Prompt Engineering</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">Semantic Chunking</span>
+              <span class="skill-subtag">Vector Stores</span>
+              <span class="skill-subtag">Cosine Similarity</span>
+              <span class="skill-subtag">Context Grounding</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Designing Retrieval-Augmented Generation workflows, fine-tuning structured prompt contracts, and grounding answers against domain knowledge.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">Technical documentation QA pipelines and the interactive portfolio assistant.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: AI AGENTS -->
+          <div class="skill-card" data-skill="agents">
+            <span class="system-num">05 / AUTONOMOUS REASONING</span>
+            <h3 class="skill-card-title has-underline">AI Agents</h3>
+            <p class="skill-card-summary">Tool Calling &middot; Agentic Workflows &middot; Memory</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">ReAct Loops</span>
+              <span class="skill-subtag">Multi-Step Plans</span>
+              <span class="skill-subtag">Error Self-Correction</span>
+              <span class="skill-subtag">Tool Routing</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Configuring reasoning loops where an LLM inspects intermediate outputs, calls local tools, and iteratively resolves task goals.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">Portfolio AI Guide navigation agent and autonomous data-brief generation.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: AUTOMATION -->
+          <div class="skill-card" data-skill="automation">
+            <span class="system-num">06 / EVENT ORCHESTRATION</span>
+            <h3 class="skill-card-title has-underline">Automation</h3>
+            <p class="skill-card-summary">n8n &middot; APIs &middot; Webhooks &middot; Workflow Automation</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">Event Triggers</span>
+              <span class="skill-subtag">Webhook Listeners</span>
+              <span class="skill-subtag">PostgreSQL Sync</span>
+              <span class="skill-subtag">JSON Pipelines</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Connecting external REST endpoints, webhook dispatchers, and language model agents into self-hosted n8n workflows.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">Automated telemetry ingest, database synchronization, and multi-channel alerting.</p>
+            </div>
+          </div>
+
+          <!-- Card 7: AI APPLICATIONS -->
+          <div class="skill-card" data-skill="applications">
+            <span class="system-num">07 / TOOLING & ECOSYSTEM</span>
+            <h3 class="skill-card-title has-underline">AI Applications</h3>
+            <p class="skill-card-summary">LangChain &middot; Vector Search &middot; AI APIs &middot; Git</p>
+            <div class="skill-card-subtags">
+              <span class="skill-subtag">LangChain Chains</span>
+              <span class="skill-subtag">Document Loaders</span>
+              <span class="skill-subtag">Google Colab</span>
+              <span class="skill-subtag">Git Architecture</span>
+            </div>
+            <div class="skill-card-expanded">
+              <div class="expanded-divider"></div>
+              <span class="expanded-label">HOW I APPLY IT</span>
+              <p class="expanded-text">Orchestrating prompt templates, connecting vector indexes, managing versioned code repositories, and conducting rapid GPU experiments.</p>
+              <span class="expanded-label">FEATURED IN</span>
+              <p class="expanded-text">End-to-end prototyping of reasoning chains and production-like model inference scripts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. PROJECTS: PAGES FROM THE WORKING NOTEBOOK ================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="projects-header-controls">
+          <div class="section-header" style="margin-bottom: 0;">
+            <span class="section-eyebrow">PROJECTS</span>
+            <h2 class="editorial-title">Pages from the working notebook.</h2>
+          </div>
+
+          <!-- Interactive Category Filter Tabs -->
+          <div class="project-filters" id="projectFilters">
+            <button type="button" class="filter-btn active" data-filter="all">All Systems</button>
+            <button type="button" class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button type="button" class="filter-btn" data-filter="nlp">Generative AI &amp; NLP</button>
+            <button type="button" class="filter-btn" data-filter="automation">Automation &amp; Agents</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Listening Patterns -->
+          <article class="project-card" tabindex="0" data-project="music" data-category="ml">
+            <div class="project-media-wrapper">
+              <img src="assets/listening.png" alt="Annual Music Listening Patterns: ML Model Analysis" class="project-banner-img">
+            </div>
+            <div class="project-content">
+              <span class="project-eyebrow">UNSUPERVISED LEARNING &middot; AUDIO EMBEDDINGS</span>
+              <h3 class="project-title">Listening Patterns</h3>
+              <div class="project-metrics-row">
+                <span class="project-metric-pill">10,400+ Tracks</span>
+                <span class="project-metric-pill">5 Audio Vectors</span>
+                <span class="project-metric-pill">K-Means &amp; PCA</span>
+              </div>
+              <p class="project-description">
+                Extracted a full year of Spotify streaming telemetry across high-dimensional audio features (valence, tempo, acousticness). Discovered cyclical circadian listening habits and distinct seasonal mood shifts using K-Means and dimensionality reduction.
+              </p>
+
+              <!-- Interactive Architecture Pipeline Toggle -->
+              <div class="project-arch-toggle-wrap">
+                <button type="button" class="btn-toggle-arch" data-arch-target="arch-music">
+                  <span>Architecture Pipeline &#9881;</span>
+                </button>
+                <div class="project-arch-diagram" id="arch-music">
+                  <div class="arch-steps-track">
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">01 / Input</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">10,400+ Spotify Web API track streaming logs</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">02 / Vectors</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">MinMax normalization across 5 acoustic dimensions</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">03 / Model</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">K-Means clustering + PCA orthogonal projection</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">04 / Result</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Mapped winter/summer phase shifts in listening valence</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <button class="project-details-btn" data-modal="modal-music">Read Study &rarr;</button>
+                <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;">GitHub &nearr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: City of Breath -->
+          <article class="project-card" tabindex="0" data-project="air" data-category="ml">
+            <div class="project-media-wrapper">
+              <img src="assets/city_of_breath.png" alt="Urban Air Quality ML Model Analysis - City of Breath" class="project-banner-img">
+            </div>
+            <div class="project-content">
+              <span class="project-eyebrow">TIME-SERIES FORECASTING &middot; SPATIAL MODELING</span>
+              <h3 class="project-title">City of Breath</h3>
+              <div class="project-metrics-row">
+                <span class="project-metric-pill">14 Sensor Nodes</span>
+                <span class="project-metric-pill">0.91 R² Accuracy</span>
+                <span class="project-metric-pill">XGBoost &amp; GeoPandas</span>
+              </div>
+              <p class="project-description">
+                Aggregated hourly particulate matter (PM2.5/PM10) readings across 14 municipal stations combined with weather telemetry. Uncovered severe early-morning thermal inversion traps between 06:00 and 09:30 AM via gradient boosted spatial regression.
+              </p>
+
+              <!-- Interactive Architecture Pipeline Toggle -->
+              <div class="project-arch-toggle-wrap">
+                <button type="button" class="btn-toggle-arch" data-arch-target="arch-air">
+                  <span>Architecture Pipeline &#9881;</span>
+                </button>
+                <div class="project-arch-diagram" id="arch-air">
+                  <div class="arch-steps-track">
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">01 / Sensors</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">14 municipal atmospheric monitors + meteorological join</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">02 / Cleaning</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Spline imputation for dropout sensor frames</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">03 / Model</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Gradient Boosted Trees (XGBoost) with GeoPandas coordinates</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">04 / Impact</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">0.91 R² fit identifying winter morning inversion layers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <button class="project-details-btn" data-modal="modal-air">Read Study &rarr;</button>
+                <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;">GitHub &nearr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Who Will Leave -->
+          <article class="project-card" tabindex="0" data-project="churn" data-category="ml">
+            <div class="project-media-wrapper">
+              <img src="assets/image.png" alt="Customer Churn ML Model Analysis - Who Will Leave" class="project-banner-img">
+            </div>
+            <div class="project-content">
+              <span class="project-eyebrow">SUPERVISED CLASSIFICATION &middot; EXPLAINABLE AI</span>
+              <h3 class="project-title">Who Will Leave</h3>
+              <div class="project-metrics-row">
+                <span class="project-metric-pill">Cost-Weighted 0.38 Cutoff</span>
+                <span class="project-metric-pill">87.4% Recall</span>
+                <span class="project-metric-pill">SHAP Interpretability</span>
+              </div>
+              <p class="project-description">
+                Tackled a 73:27 imbalanced telecom dataset using SMOTE and stratified cross-validation. Tuned decision probability cutoffs to optimize business retention costs over naive accuracy, and explained feature importances with SHAP attribution.
+              </p>
+
+              <!-- Interactive Architecture Pipeline Toggle -->
+              <div class="project-arch-toggle-wrap">
+                <button type="button" class="btn-toggle-arch" data-arch-target="arch-churn">
+                  <span>Architecture Pipeline &#9881;</span>
+                </button>
+                <div class="project-arch-diagram" id="arch-churn">
+                  <div class="arch-steps-track">
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">01 / Raw Data</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">73:27 imbalanced telecom subscriber transactional records</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">02 / Resample</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">SMOTE oversampling + 5-fold stratified cross-validation</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">03 / LightGBM</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Optimized cost decision cutoff at 0.38 probability</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">04 / XAI</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">SHAP tree explainability identifying contract vulnerabilities</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <button class="project-details-btn" data-modal="modal-churn">Read Study &rarr;</button>
+                <a href="https://churns-prediction-ml-model.streamlit.app/" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;"> View Project &nearr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Stockwise Inventory Stockout Prediction -->
+          <article class="project-card" tabindex="0" data-project="stockout" data-category="ml">
+            <div class="project-media-wrapper">
+              <img src="assets/project-stockwise.svg" alt="Stockwise inventory dashboard illustration showing stockout risk, product stock coverage, and a Logistic Regression model" class="project-banner-img">
+            </div>
+            <div class="project-content">
+              <span class="project-eyebrow">INVENTORY INTELLIGENCE &middot; LOGISTIC REGRESSION</span>
+              <h3 class="project-title">Stockwise: Stockout Intelligence</h3>
+              <div class="project-metrics-row">
+                <span class="project-metric-pill">Custom Logistic Regression</span>
+                <span class="project-metric-pill">12 Engineered Features</span>
+                <span class="project-metric-pill">CSV Risk Analysis</span>
+              </div>
+              <p class="project-description">
+                Built an inventory analytics dashboard that validates uploaded retail data, engineers sales and stock-pressure signals, and scores stockout risk with a custom Logistic Regression pipeline. Operational stock status is reported separately from the model's risk estimate.
+              </p>
+
+              <div class="project-arch-toggle-wrap">
+                <button type="button" class="btn-toggle-arch" data-arch-target="arch-stockout">
+                  <span>Architecture Pipeline &#9881;</span>
+                </button>
+                <div class="project-arch-diagram" id="arch-stockout">
+                  <div class="arch-steps-track">
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">01 / Upload</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Validate CSV columns, dates, and numeric inventory values</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">02 / Features</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Engineer rolling sales, demand ratios, sales trends, and stock pressure</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">03 / Model</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Scale 12 features and score risk with a custom Logistic Regression model</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">04 / Insights</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Review inventory metrics, trends, risk, and export analyzed records</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <button class="project-details-btn" data-modal="modal-stockout">Read Study &rarr;</button>
+                <a href="https://inventory-stockout-prediction-model-iota.vercel.app/" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;">View Project &nearr;</a>
+                <a href="https://github.com/arpit4baj/Stockout_model" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;">GitHub &nearr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Market Discourse (NLP & Embeddings) -->
+          <article class="project-card" tabindex="0" data-project="nlp" data-category="nlp">
+            <div class="project-media-wrapper">
+              <img src="assets/project-nlp.jpg" alt="NLP Token Embedding and Financial Sentiment Pipeline" class="project-banner-img">
+            </div>
+            <div class="project-content">
+              <span class="project-eyebrow">NATURAL LANGUAGE PROCESSING &middot; EMBEDDINGS</span>
+              <h3 class="project-title">Market Discourse</h3>
+              <div class="project-metrics-row">
+                <span class="project-metric-pill">BERT &amp; Word2Vec</span>
+                <span class="project-metric-pill">High-Dim Vectors</span>
+                <span class="project-metric-pill">Time-Series Sentiment</span>
+              </div>
+              <p class="project-description">
+                Built a natural language processing pipeline vectorizing financial commentary and quarterly earnings transcripts into high-dimensional embedding spaces, mapping shifts in market sentiment against macroeconomic policy events.
+              </p>
+
+              <!-- Interactive Architecture Pipeline Toggle -->
+              <div class="project-arch-toggle-wrap">
+                <button type="button" class="btn-toggle-arch" data-arch-target="arch-nlp">
+                  <span>Architecture Pipeline &#9881;</span>
+                </button>
+                <div class="project-arch-diagram" id="arch-nlp">
+                  <div class="arch-steps-track">
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">01 / Corpus</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Transcripts, federal statements &amp; news stream ingestion</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">02 / Vectors</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">BERT &amp; Word2Vec token embeddings across orthogonal axes</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">03 / Inference</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Cosine projection along Growth vs. Risk anchor vectors</span>
+                    </div>
+                    <div class="arch-step-item">
+                      <span class="arch-step-node">04 / Leading</span>
+                      <span class="arch-step-connector">&rarr;</span>
+                      <span class="arch-step-desc">Sentiment volatility leading sector price changes by 48-72h</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <button class="project-details-btn" data-modal="modal-nlp">Read Study &rarr;</button>
+                <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="sheet-open-pdf" style="font-size: 0.8rem;">GitHub &nearr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. AI PLAYGROUND ================= -->
+    <section class="section playground-section" id="playground">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI PLAYGROUND</span>
+          <h2 class="editorial-title">Interactive intelligence demonstrations.</h2>
+          <p class="section-lead-text">
+            Test the portfolio's built-in reasoning systems. Interact with the live AI Guide, take an autonomous guided tour, ask technical questions, or evaluate skills in action.
+          </p>
+        </div>
+
+        <div class="playground-shell">
+          <!-- Navigation Tabs -->
+          <div class="playground-nav-tabs">
+            <button type="button" class="playground-tab-btn active" data-tab="tab-guide">✦ AI Guide &amp; Navigator</button>
+            <button type="button" class="playground-tab-btn" data-tab="tab-qa">Portfolio Q&amp;A</button>
+            <button type="button" class="playground-tab-btn" data-tab="tab-explainer">Project Explainer</button>
+            <button type="button" class="playground-tab-btn" data-tab="tab-recommender">Project Matchmaker</button>
+            <button type="button" class="playground-tab-btn" data-tab="tab-skills">Skill In Action</button>
+          </div>
+
+          <!-- Tab 1: AI Guide & Navigator (Workable In-Page Agent) -->
+          <div class="playground-tab-content is-active" id="tab-guide">
+            <div class="playground-guide-layout">
+              <!-- Left Pane: Live Interactive Chat with Agent -->
+              <div class="guide-chat-pane">
+                <span class="playground-prompts-label">Interactive AI Guide &middot; Live ReAct Reasoning</span>
+                
+                <!-- Chat Stream Container -->
+                <div class="playground-guide-history" id="playgroundGuideHistory">
+                  <div class="chat-bubble chat-bubble-assistant">
+                    Hello! I'm your interactive <strong>Portfolio Guide</strong>. I have complete access to Arpit's engineering projects, architecture models, and resume. I can explain technical details or <em>autonomously navigate</em> the portfolio for you.<br><br>
+                    Try asking a question below, or select a <strong>Guided Tour</strong> on the right.
+                  </div>
+                </div>
+
+                <!-- Suggested Quick Prompts -->
+                <div class="prompt-chips-group">
+                  <button type="button" class="chip-btn" data-guide-query="Show me your ML projects.">Show me your ML projects</button>
+                  <button type="button" class="chip-btn" data-guide-query="Take me to the Automation Lab.">Take me to Automation Lab</button>
+                  <button type="button" class="chip-btn" data-guide-query="Explain Arpit's strongest work.">What is his strongest work?</button>
+                  <button type="button" class="chip-btn" data-guide-query="Open Arpit's résumé.">Open printable résumé</button>
+                </div>
+
+                <!-- Input Row -->
+                <div class="playground-input-row" style="margin-bottom: 0;">
+                  <input type="text" class="playground-text-input" id="playgroundGuideInput" placeholder="Ask anything, or type 'filter to ML' or 'show architecture'..." autocomplete="off">
+                  <button type="button" class="playground-submit-btn" id="playgroundGuideSubmitBtn">Guide Me</button>
+                </div>
+              </div>
+
+              <!-- Right Pane: Guided System Tours -->
+              <div class="guide-tours-pane">
+                <span class="playground-prompts-label">Guided System Missions</span>
+                <p style="font-size: 0.82rem; color: var(--text-body); margin-top: 0.2rem;">
+                  One-click automated walkthroughs tailored for different visitor goals.
+                </p>
+
+                <!-- Tour 1 -->
+                <div class="guided-tour-card">
+                  <h4 class="tour-title">1. Machine Learning &amp; XAI Tour</h4>
+                  <p class="tour-desc">Walks you through Arpit's empirical rigor: filters to ML projects, opens the pipeline architectures, and explains the 87.4% recall churn classifier.</p>
+                  <button type="button" class="btn-start-tour" data-tour="ml">
+                    <span>Start ML Tour</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="guided-tour-card">
+                  <h4 class="tour-title">2. AI Automation &amp; n8n Tour</h4>
+                  <p class="tour-desc">Navigates directly to the Automation Lab, loads the Churn Triage scenario, and triggers the live workflow simulation.</p>
+                  <button type="button" class="btn-start-tour" data-tour="automation">
+                    <span>Start Automation Tour</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="guided-tour-card">
+                  <h4 class="tour-title">3. Fast Recruiter / Lead Evaluation</h4>
+                  <p class="tour-desc">Concise briefing on education (SRMCEM 2028), India AI Buildathon finalist status, core competencies, and opens the printable résumé.</p>
+                  <button type="button" class="btn-start-tour" data-tour="recruiter">
+                    <span>Start Recruiter Tour</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Portfolio Q&A -->
+          <div class="playground-tab-content" id="tab-qa">
+            <div class="playground-qa-box">
+              <span class="playground-prompts-label">Direct Portfolio Inquiries</span>
+              <div class="prompt-chips-group">
+                <button type="button" class="chip-btn" data-prompt="What projects have you built?">What projects have you built?</button>
+                <button type="button" class="chip-btn" data-prompt="Show me your ML projects.">Show me your ML projects.</button>
+                <button type="button" class="chip-btn" data-prompt="Tell me about your AI automation projects.">Tell me about your AI automation with n8n.</button>
+                <button type="button" class="chip-btn" data-prompt="What is your strongest project?">What is your strongest project?</button>
+                <button type="button" class="chip-btn" data-prompt="Why should I hire you?">Why should I hire you?</button>
+              </div>
+
+              <div class="playground-input-row">
+                <input type="text" class="playground-text-input" id="playgroundInput" placeholder="Ask about Arpit's projects, machine learning, or experience..." autocomplete="off">
+                <button type="button" class="playground-submit-btn" id="playgroundSubmitBtn">Ask AI</button>
+              </div>
+
+              <div class="playground-answer-output" id="playgroundAnswer">
+                Click any prompt chip above or type a question to receive a structured answer from Arpit's portfolio knowledge model.
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Project Explainer -->
+          <div class="playground-tab-content" id="tab-explainer">
+            <div class="explainer-select-wrap">
+              <label for="explainerProjectSelect" class="playground-prompts-label">Select a project to inspect its technical architecture</label>
+              <select id="explainerProjectSelect" class="explainer-select">
+                <option value="music">Listening Patterns &middot; Spotify Audio PCA &amp; K-Means</option>
+                <option value="air">City of Breath &middot; Urban Air Quality XGBoost Regression</option>
+                <option value="churn">Who Will Leave &middot; Telecom Churn Classifier &amp; SHAP</option>
+                <option value="stockout">Stockwise &middot; Inventory Stockout Risk &amp; Logistic Regression</option>
+                <option value="nlp">Market Discourse &middot; Financial Embeddings &amp; NLP</option>
+              </select>
+            </div>
+
+            <div class="explainer-display-card" id="explainerDisplay">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Tab 4: Project Matchmaker -->
+          <div class="playground-tab-content" id="tab-recommender">
+            <p class="recommender-prompt">Which technical engineering specialty are you evaluating today?</p>
+            <div class="recommender-options">
+              <button type="button" class="recommender-pill-btn active" data-match="ml">Tabular ML &amp; Explainable AI (SHAP)</button>
+              <button type="button" class="recommender-pill-btn" data-match="timeseries">Spatial Regression &amp; Time-Series Signals</button>
+              <button type="button" class="recommender-pill-btn" data-match="unsupervised">Audio Vectorization &amp; Unsupervised Clustering</button>
+              <button type="button" class="recommender-pill-btn" data-match="nlp">Transformer NLP &amp; Semantic Embeddings</button>
+            </div>
+            <div class="recommender-result-box" id="recommenderResult">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Tab 5: Skill In Action -->
+          <div class="playground-tab-content" id="tab-skills">
+            <span class="playground-prompts-label">Select a technology to see its exact implementation</span>
+            <div class="skills-action-selector">
+              <button type="button" class="skill-action-btn active" data-skill-item="langchain">LangChain</button>
+              <button type="button" class="skill-action-btn" data-skill-item="n8n">n8n Automation</button>
+              <button type="button" class="skill-action-btn" data-skill-item="shap">SHAP Explainability</button>
+              <button type="button" class="skill-action-btn" data-skill-item="xgboost">XGBoost Regression</button>
+              <button type="button" class="skill-action-btn" data-skill-item="pandas">Pandas Pipelines</button>
+              <button type="button" class="skill-action-btn" data-skill-item="sql">SQL Window Functions</button>
+            </div>
+            <div class="skill-action-result" id="skillActionResult">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. UNDER THE HOOD: SYSTEM ARCHITECTURE ================= -->
+    <section class="section under-the-hood-section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">SYSTEM ARCHITECTURE</span>
+          <h2 class="editorial-title">Under the hood.</h2>
+          <p class="section-lead-text">
+            How this portfolio combines an editorial frontend with client-side reasoning, structured state representation, and event automation.
+          </p>
+        </div>
+
+        <div class="hood-architecture-card">
+          <div class="hood-stack-layers">
+            <!-- Layer 1 -->
+            <div class="hood-layer">
+              <div class="layer-info">
+                <span class="layer-tag">LAYER 01 / CLIENT &amp; INTERFACE</span>
+                <h4 class="layer-title">Editorial Presentation</h4>
+                <p class="layer-desc">Zero external runtime framework overhead. Fast semantic HTML5, pure CSS custom design tokens, and a 60fps high-DPI constellation physics canvas.</p>
+              </div>
+              <div class="layer-badges">
+                <span class="hood-badge">Semantic HTML5</span>
+                <span class="hood-badge">Vanilla CSS3</span>
+                <span class="hood-badge">Canvas 2D API</span>
+                <span class="hood-badge">High-DPI Retina</span>
+              </div>
+            </div>
+
+            <div class="hood-connector-indicator">&darr;</div>
+
+            <!-- Layer 2 -->
+            <div class="hood-layer">
+              <div class="layer-info">
+                <span class="layer-tag">LAYER 02 / AGENTIC CONTROLLER</span>
+                <h4 class="layer-title">Agentic Routing &amp; Knowledge</h4>
+                <p class="layer-desc">Deterministic client-side RAG engine with full domain knowledge of Arpit's projects, capable of programmatic function calling and UI traversal.</p>
+              </div>
+              <div class="layer-badges">
+                <span class="hood-badge">Tool Calling Dispatcher</span>
+                <span class="hood-badge">Scrollspy Engine</span>
+                <span class="hood-badge">State Management</span>
+                <span class="hood-badge">Instant Client RAG</span>
+              </div>
+            </div>
+
+            <div class="hood-connector-indicator">&darr;</div>
+
+            <!-- Layer 3 -->
+            <div class="hood-layer">
+              <div class="layer-info">
+                <span class="layer-tag">LAYER 03 / AI &amp; REASONING</span>
+                <h4 class="layer-title">AI Layer &amp; Model Grounding</h4>
+                <p class="layer-desc">ReAct reasoning loops, structured prompt contracts, and dense semantic embeddings connecting language with empirical project data.</p>
+              </div>
+              <div class="layer-badges">
+                <span class="hood-badge">LangChain ReAct</span>
+                <span class="hood-badge">Structured Output</span>
+                <span class="hood-badge">Dense Embeddings</span>
+                <span class="hood-badge">Context Anchors</span>
+              </div>
+            </div>
+
+            <div class="hood-connector-indicator">&darr;</div>
+
+            <!-- Layer 4 -->
+            <div class="hood-layer">
+              <div class="layer-info">
+                <span class="layer-tag">LAYER 04 / AUTOMATION &amp; INTEGRATION</span>
+                <h4 class="layer-title">Automation &amp; Data Pipeline</h4>
+                <p class="layer-desc">Event-driven workflows linking APIs, webhooks, and relational data stores to eliminate manual friction.</p>
+              </div>
+              <div class="layer-badges">
+                <span class="hood-badge">n8n Orchestrator</span>
+                <span class="hood-badge">PostgreSQL &middot; SQL</span>
+                <span class="hood-badge">REST Webhooks</span>
+                <span class="hood-badge">Data Transformations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11. EXPLORING AI ================= -->
+    <section class="section exploring-ai-section" id="ai">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-text-col">
+            <span class="section-eyebrow">EXPLORING AI</span>
+            <h2 class="editorial-title">Today, my curiosity has led me toward intelligence itself.</h2>
+
+            <div class="editorial-body">
+              <p>
+                I'm reading, prototyping, and trying &mdash; slowly &mdash; to understand how large models think, how agents act, how we might build systems that are useful and humane.
+              </p>
+            </div>
+
+            <!-- Pill Badges matching Screenshot 2 -->
+            <div class="ai-tags-group">
+              <span class="ai-pill-tag">LLMs</span>
+              <span class="ai-pill-tag">Generative AI</span>
+              <span class="ai-pill-tag">AI Agents</span>
+              <span class="ai-pill-tag">Deep Learning</span>
+              <span class="ai-pill-tag">Automation with n8n</span>
+              <span class="ai-pill-tag">LangChain</span>
+            </div>
+          </div>
+
+          <div class="editorial-media-col">
+            <div class="image-frame ai-network-frame">
+              <img src="assets/ai-connections.svg" alt="Connections, forming and re-forming" class="framed-image">
+            </div>
+            <div class="image-caption">CONNECTIONS, FORMING AND RE-FORMING</div>
+          </div>
+        </div>
+
+        <!-- Three Exploring AI Deep Dive Pillars -->
+        <div class="ai-pillars-row">
+          <div class="ai-pillar-card">
+            <span class="ai-pillar-tag">01 / AUTONOMY</span>
+            <h4 class="ai-pillar-title">Agentic Loops &amp; Tool Use</h4>
+            <p class="ai-pillar-desc">
+              Building multi-step reasoning systems using the ReAct (Reason + Act) loop, enabling models to plan, execute code, verify intermediate results, and self-correct runtime errors.
+            </p>
+          </div>
+          <div class="ai-pillar-card">
+            <span class="ai-pillar-tag">02 / KNOWLEDGE</span>
+            <h4 class="ai-pillar-title">Vector RAG Pipelines</h4>
+            <p class="ai-pillar-desc">
+              Grounding generation with dense semantic vector search, dynamic chunking strategies, and re-ranking models to ensure factual reliability over high-volume technical documentation.
+            </p>
+          </div>
+          <div class="ai-pillar-card">
+            <span class="ai-pillar-tag">03 / ORCHESTRATION</span>
+            <h4 class="ai-pillar-title">Event Automation with n8n</h4>
+            <p class="ai-pillar-desc">
+              Connecting databases, webhook listeners, and language models into production-like automated workflows that digest papers and output structured intelligence briefs without human friction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. WHERE I'M HEADED ================= -->
+    <section class="section where-headed-section" id="headed">
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="editorial-text-col">
+            <span class="section-eyebrow">WHERE I'M HEADED</span>
+            <h2 class="editorial-title">A path toward the horizon.</h2>
+
+            <div class="editorial-body">
+              <p>
+                I don't know exactly where this leads. I do know the next few markers along the way &mdash; and that, for now, is enough.
+              </p>
+            </div>
+
+            <!-- Horizon Checklist matching Screenshot 3 -->
+            <ul class="horizon-checklist">
+              <li>Ship work that helps someone make a better decision.</li>
+              <li>Contribute to an open-source ML or AI tool.</li>
+              <li>Write clearly about what I learn, in public.</li>
+              <li>Build a small, useful AI agent of my own.</li>
+            </ul>
+          </div>
+
+          <div class="editorial-media-col">
+            <div class="image-frame horizon-frame">
+              <img src="assets/horizon-mountains.svg" alt="The next ridge, not the last" class="framed-image">
+            </div>
+            <div class="image-caption">THE NEXT RIDGE, NOT THE LAST</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. RECOGNITION ================= -->
+    <section class="section recognition-section" id="recognition">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">RECOGNITION</span>
+          <h2 class="editorial-title">Milestones worth noting.</h2>
+        </div>
+
+        <div class="recognition-grid">
+          <!-- Card 1 -->
+          <div class="recognition-card">
+            <span class="recognition-index">01</span>
+            <h3 class="recognition-title">National Finalist &middot; India AI Buildathon</h3>
+            <p class="recognition-desc">
+              Selected as a national finalist among competitive collegiate engineering teams across India in the India AI Impact Buildathon, pitching a machine learning solution to bridge civic datasets with public intelligence.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="recognition-card">
+            <span class="recognition-index">02</span>
+            <h3 class="recognition-title">4 Production-Grade ML Pipelines</h3>
+            <p class="recognition-desc">
+              Independently engineered and benchmarked 4 complete data systems: Unsupervised Spotify Audio PCA Clustering, XGBoost Spatial Inversion Forecasting, Cost-Weighted Telecom Churn Modeling, and Financial NLP Token Embedding Pipelines.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="recognition-card">
+            <span class="recognition-index">03</span>
+            <h3 class="recognition-title">Data Storytelling &amp; UI Craft</h3>
+            <p class="recognition-desc">
+              Conceived and coded this bespoke, high-performance editorial portfolio from scratch. Features an interactive physics constellation canvas, modular architecture, responsive typography, and print-optimized résumé modal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11. EDUCATION ================= -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">EDUCATION</span>
+          <h2 class="editorial-title">Learning, formal and otherwise.</h2>
+        </div>
+
+        <div class="education-grid">
+          <!-- Card 1: Formal -->
+          <div class="education-card">
+            <span class="education-tag">FORMAL</span>
+
+            <div class="education-entry">
+              <h3 class="education-degree">B.Tech in Computer Science &amp; Engineering</h3>
+              <p class="education-institution">Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM), Lucknow</p>
+              <span class="education-date">EXPECTED GRADUATION &middot; 2028</span>
+              <p class="education-coursework" style="font-size: 0.85rem; color: var(--text-body); margin-top: 0.5rem; line-height: 1.5;">
+                <strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), Discrete Mathematics, Probability &amp; Applied Statistics, Linear Algebra.
+              </p>
+            </div>
+
+            <div class="education-entry" style="margin-top: 1.2rem;">
+              <h3 class="education-degree">Senior Secondary &amp; Secondary Education</h3>
+              <p class="education-institution">City Convent School, Lucknow</p>
+              <span class="education-date">Science &amp; Mathematics Stream</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Self-Directed -->
+          <div class="education-card">
+            <span class="education-tag">SELF-DIRECTED &amp; CONTINUOUS</span>
+
+            <ul class="education-bullet-list">
+              <li><strong>Machine Learning &amp; Statistical Modeling:</strong> Supervised learning, classification metrics, tree ensembles (LightGBM, XGBoost), clustering, and SHAP explainability.</li>
+              <li><strong>Data Engineering &amp; Profiling:</strong> Relational schema queries with SQL, complex CTEs, window functions, and Pandas data transformation pipelines.</li>
+              <li><strong>Modern AI &amp; Agentic Workflows:</strong> Vector embeddings, RAG architectures, prompt tuning, LangChain reasoning loops, and event-driven automation with n8n.</li>
+              <li><strong>Algorithmic Problem Solving:</strong> Regular practice in algorithmic complexity, array transformations, and tree traversals in C++ and Python.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 12. RÉSUMÉ SECTION ================= -->
+    <section class="section resume-section" id="resume">
+      <div class="container">
+        <span class="section-eyebrow">RÉSUMÉ</span>
+        <h2 class="editorial-title">A closer look at what I'm building.</h2>
+
+        <div class="editorial-grid resume-showcase-grid">
+          <!-- Left Column -->
+          <div class="editorial-text-col resume-left-col">
+            <p class="resume-hero-lead">
+              Aspiring Machine Learning Engineer and Data Scientist, building practical, thoughtful tools with data, software, and emerging AI.
+            </p>
+
+            <div class="resume-practice-block">
+              <span class="practice-heading">AREAS OF PRACTICE</span>
+              <ul class="practice-list">
+                <li>Data structures &amp; algorithms &middot; Java</li>
+                <li>Full-stack development &middot; HTML, CSS, JavaScript, React, Node.js, MongoDB, SQL</li>
+                <li>Data science &amp; machine learning &middot; Python, Pandas, NumPy, scikit-learn, TensorFlow, PyTorch</li>
+                <li>AI tools &amp; automation &middot; LangChain, OpenAI API, n8n</li>
+              </ul>
+            </div>
+
+            <div class="resume-cta-wrap">
+              <a href="#modal-resume" class="btn btn-dark" id="resumeDownloadBtn" data-modal="modal-resume">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download resume</span>
+              </a>
+
+              <p class="resume-location-note">
+                Lucknow, Uttar Pradesh &middot; <a href="mailto:ab1790197@gmail.com">ab1790197@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 13. LET'S CONNECT (CONTACT) ================= -->
+    <section class="section connect-section" id="contact">
+      <div class="container">
+        <div class="editorial-grid connect-grid">
+          <!-- Left Column -->
+          <div class="editorial-text-col">
+            <span class="section-eyebrow">LET'S CONNECT</span>
+            <h2 class="editorial-title">Thank you for reading to the end.</h2>
+
+            <div class="editorial-body">
+              <p class="connect-lead">
+                I'm still learning, still building, and still curious. If you'd like to collaborate, share an idea, or simply say hello &mdash; the door is open.
+              </p>
+            </div>
+
+            <!-- Structured Links List with Refined Badges and Actions -->
+            <div class="connect-links-table">
+              <!-- Email Row -->
+              <div class="connect-row-link">
+                <a href="mailto:ab1790197@gmail.com" class="connect-row-left" title="Send email to Arpit Bajpai">
+                  <div class="connect-icon-badge">
+                    <svg class="connect-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="connect-row-meta">
+                    <span class="connect-platform-name">Email</span>
+                    <span class="connect-platform-handle">ab1790197@gmail.com</span>
+                  </div>
+                </a>
+                <div class="connect-row-right">
+                  <button type="button" class="connect-copy-pill" id="copyEmailConnectBtn" aria-label="Copy email address" title="Copy email address">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                  <a href="mailto:ab1790197@gmail.com" class="connect-arrow" aria-label="Compose email">&rarr;</a>
+                </div>
+              </div>
+
+              <!-- GitHub Row -->
+              <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="connect-row-link" title="Visit GitHub profile">
+                <div class="connect-row-left">
+                  <div class="connect-icon-badge">
+                    <svg class="connect-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </div>
+                  <div class="connect-row-meta">
+                    <span class="connect-platform-name">GitHub</span>
+                    <span class="connect-platform-handle">github.com/arpit4baj</span>
+                  </div>
+                </div>
+                <div class="connect-row-right">
+                  <span class="connect-arrow">&nearr;</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn Row -->
+              <a href="https://www.linkedin.com/in/arpit-bajpai-257308213" target="_blank" rel="noopener noreferrer" class="connect-row-link" title="Visit LinkedIn profile">
+                <div class="connect-row-left">
+                  <div class="connect-icon-badge">
+                    <svg class="connect-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="connect-row-meta">
+                    <span class="connect-platform-name">LinkedIn</span>
+                    <span class="connect-platform-handle">linkedin.com/in/arpit-bajpai-257308213</span>
+                  </div>
+                </div>
+                <div class="connect-row-right">
+                  <span class="connect-arrow">&nearr;</span>
+                </div>
+              </a>
+
+              <!-- Location & Availability Row -->
+              <div class="connect-row-link">
+                <div class="connect-row-left">
+                  <div class="connect-icon-badge">
+                    <svg class="connect-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="connect-row-meta">
+                    <span class="connect-platform-name">Location &amp; Work</span>
+                    <span class="connect-platform-handle">Lucknow, India &bull; Open to Remote &amp; Onsite Roles</span>
+                  </div>
+                </div>
+                <div class="connect-row-right">
+                  <span class="status-pulse-dot" style="margin-right: 0.5rem;" title="Available"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download Button & Response Note -->
+            <div class="connect-cta-wrap">
+              <a href="#modal-resume" class="btn btn-outline connect-pdf-btn" data-modal="modal-resume">
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download résumé (PDF)</span>
+              </a>
+            </div>
+
+            <p class="connect-availability-note">
+              Typically replies within 24 hours &bull; Open for Summer 2025/2026 machine learning internships, research collaborations, and open-source inquiries.
+            </p>
+          </div>
+
+          <!-- Right Column: Folded Paper Plane Artwork & Status Frame -->
+          <div class="editorial-media-col">
+            <div class="connect-artwork-card">
+              <div class="paper-plane-frame">
+                <img src="assets/paper_plane.png" alt="Folded paper plane with pen on warm stone surface" class="framed-image">
+              </div>
+              <div class="image-caption">AN INVITATION TO DIALOGUE &middot; LUCKNOW, INDIA</div>
+
+              <div class="connect-status-badge">
+                <div class="status-pulse-dot"></div>
+                <div class="status-text-group">
+                  <span class="status-title">Status: Active &amp; Exploring</span>
+                  <span class="status-desc">Currently building data pipelines, training ML models, and prototyping LLM agents.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-brand">Arpit Bajpai</p>
+        <p class="footer-tagline">Every dataset tells a story.</p>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="currentYear"></span> Arpit Bajpai. Built with curiosity &amp; care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING BACK TO TOP BUTTON ================= -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+  <!-- ================= PROJECT DETAILS MODALS ================= -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <!-- Music Modal -->
+    <div class="modal-dialog" id="modal-music" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <span class="modal-eyebrow">AN ANALYSIS OF A YEAR OF MUSIC</span>
+        <h2 class="modal-title">Listening Patterns</h2>
+        <p class="modal-question">Could a year of listening history reveal mood, season, and routine?</p>
+
+        <div class="modal-media">
+          <img src="assets/project-music-banner.svg" alt="Music listening telemetry">
+        </div>
+
+        <div class="modal-section">
+          <h4>The Approach</h4>
+          <p>
+            Using the Spotify Web API, I extracted over 10,400 stream events spanning a 12-month period. Each track was vectorized across high-dimensional audio features: <em>energy, acousticness, danceability, valence, and tempo</em>.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Findings</h4>
+          <p>
+            K-Means clustering with Principal Component Analysis (PCA) revealed sharp cyclical phase shifts. Winter months exhibited higher acousticness and lower tempo clusters, while summer showed intense spikes in valence and danceability.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Tools &amp; Stack</h4>
+          <div class="competencies-tags">
+            <span class="comp-tag">Python</span>
+            <span class="comp-tag">Spotify Web API</span>
+            <span class="comp-tag">Scikit-Learn</span>
+            <span class="comp-tag">K-Means &amp; PCA</span>
+            <span class="comp-tag">Seaborn &amp; Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Repository &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Air Quality Modal -->
+    <div class="modal-dialog" id="modal-air" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <span class="modal-eyebrow">A STUDY OF URBAN AIR QUALITY</span>
+        <h2 class="modal-title">City of Breath</h2>
+        <p class="modal-question">Where, and when, was the air the worst in my city last year?</p>
+
+        <div class="modal-media">
+          <img src="assets/project-air-banner.svg" alt="Urban Air Quality analysis banner">
+        </div>
+
+        <div class="modal-section">
+          <h4>The Approach</h4>
+          <p>
+            Gathered continuous hourly particulate matter (PM2.5 and PM10) data from 14 municipal atmospheric sensor stations. Cleaned anomalies, imputed sensor dropouts via spline interpolation, and trained an XGBoost regression model with meteorological features.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Findings</h4>
+          <p>
+            Thermal inversions between 06:00 and 09:30 AM in November and December produced the highest pollutant retention. Wind velocity exceeding 12 km/h demonstrated the strongest negative correlation with severe PM2.5 spikes.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Tools &amp; Stack</h4>
+          <div class="competencies-tags">
+            <span class="comp-tag">Python</span>
+            <span class="comp-tag">XGBoost</span>
+            <span class="comp-tag">GeoPandas</span>
+            <span class="comp-tag">Time-Series Decomposition</span>
+            <span class="comp-tag">Plotly Express</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Repository &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Churn Modal -->
+    <div class="modal-dialog" id="modal-churn" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <span class="modal-eyebrow">A CHURN CLASSIFIER FROM SCRATCH</span>
+        <h2 class="modal-title">Who Will Leave</h2>
+        <p class="modal-question">Predict which customers, in a fictional telecom dataset, would cancel next month.</p>
+
+        <div class="modal-media">
+          <img src="assets/project-churn-banner.svg" alt="Customer churn classifier telemetry">
+        </div>
+
+        <div class="modal-section">
+          <h4>The Approach</h4>
+          <p>
+            Tackled class imbalance using SMOTE and stratified cross-validation. Compared Logistic Regression, Random Forest, and LightGBM classifiers. Implemented cost-sensitive probability threshold optimization rather than the default 0.5 cutoff.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Findings</h4>
+          <p>
+            Using SHAP (SHapley Additive exPlanations), month-to-month contracts and customer service inquiries greater than 3 were identified as the strongest predictive vectors for churn.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Tools &amp; Stack</h4>
+          <div class="competencies-tags">
+            <span class="comp-tag">Python</span>
+            <span class="comp-tag">LightGBM &amp; Scikit-Learn</span>
+            <span class="comp-tag">SHAP Interpretability</span>
+            <span class="comp-tag">Precision-Recall Tuning</span>
+            <span class="comp-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://churns-prediction-ml-model.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Project &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Stockout Prediction Modal -->
+    <div class="modal-dialog" id="modal-stockout" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <span class="modal-eyebrow">INVENTORY INTELLIGENCE &middot; CUSTOM LOGISTIC REGRESSION</span>
+        <h2 class="modal-title">Stockwise: Stockout Intelligence</h2>
+        <p class="modal-question">How can historical sales and current inventory signals help teams spot products at risk of running out?</p>
+
+        <div class="modal-media">
+          <img src="assets/project-stockwise.svg" alt="Stockwise inventory dashboard illustration showing stockout risk, product stock coverage, and a Logistic Regression model">
+        </div>
+
+        <div class="modal-section">
+          <h4>Data Pipeline &amp; Model</h4>
+          <p>
+            The dashboard accepts a retail inventory CSV, validates required columns and values, parses dates, and orders records by store, product, and date. A custom Logistic Regression pipeline scales 12 features, including inventory, units sold and ordered, demand forecast, 7- and 14-period rolling sales, inventory-to-demand ratio, sales trend, stock pressure, price, discount, and competitor pricing. The model produces a stockout-risk probability that is mapped to a risk class using a configurable threshold.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Dashboard &amp; Interpretation</h4>
+          <p>
+            Users can review inventory KPIs, sales trends, stock breakdowns, and analyzed records, then export the results as CSV. Operational stock status is calculated from inventory and demand indicators; it is distinct from the Logistic Regression risk estimate. Risk probabilities and operational labels should not be treated as interchangeable or as guarantees of future stock availability.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Tools &amp; Stack</h4>
+          <div class="competencies-tags">
+            <span class="comp-tag">Python</span>
+            <span class="comp-tag">Custom Logistic Regression</span>
+            <span class="comp-tag">NumPy &amp; Pandas</span>
+            <span class="comp-tag">Flask</span>
+            <span class="comp-tag">HTML, CSS &amp; JavaScript</span>
+            <span class="comp-tag">CSV Analytics</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://inventory-stockout-prediction-model-iota.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Live Dashboard &nearr;</a>
+          <a href="https://github.com/arpit4baj/Stockout_model" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Source Code &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NLP Market Discourse Modal -->
+    <div class="modal-dialog" id="modal-nlp" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <span class="modal-eyebrow">NATURAL LANGUAGE PROCESSING &middot; FINANCIAL EMBEDDINGS</span>
+        <h2 class="modal-title">Market Discourse</h2>
+        <p class="modal-question">Can high-dimensional semantic embeddings capture sentiment shifts before market consensus forms?</p>
+
+        <div class="modal-media">
+          <img src="assets/project-nlp.jpg" alt="NLP Token Embedding & Financial Sentiment Time-Series Diagram">
+        </div>
+
+        <div class="modal-section">
+          <h4>The Problem &amp; Data Pipeline</h4>
+          <p>
+            Financial commentary, corporate quarterly transcripts, and macroeconomic announcements contain subtle language shifts that simple bag-of-words or lexicon-based counters miss. The objective was to build a continuous semantic embedding and time-series tracking pipeline capable of mapping institutional discourse onto an interpretable sentiment continuum.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Methodology &amp; Architecture</h4>
+          <p>
+            Raw financial text was tokenized, cleaned, and embedded into dense vector representations using Word2Vec and fine-tuned BERT transformer encoders. Semantic vectors were mapped across orthogonal sentiment dimensions (e.g. <em>Growth vs. Risk</em>, <em>Surge vs. Recession</em>). Cosine similarities to contextual anchor tokens were continuously calculated and smoothed via rolling exponential time-series filters.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Findings</h4>
+          <p>
+            The continuous sentiment score correctly tracked market inflections during major policy announcements and rate hike cycles, showing that language volatility frequently leads statistical price volatility by 48 to 72 hours in specific equity sectors.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Tools &amp; Stack</h4>
+          <div class="competencies-tags">
+            <span class="comp-tag">Python 3</span>
+            <span class="comp-tag">BERT &amp; Transformers</span>
+            <span class="comp-tag">Word2Vec &amp; NLTK</span>
+            <span class="comp-tag">Time-Series Resampling</span>
+            <span class="comp-tag">NumPy Vector Math</span>
+            <span class="comp-tag">Plotly &amp; Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://github.com/arpit4baj" target="_blank" rel="noopener noreferrer" class="btn btn-dark">View Repository &nearr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Résumé Modal -->
+    <div class="modal-dialog resume-modal-dialog" id="modal-resume" role="dialog" aria-hidden="true">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <div class="resume-sheet">
+          <header class="resume-sheet-header">
+            <h1 class="resume-sheet-name">Arpit Bajpai</h1>
+            <p class="resume-sheet-sub">Aspiring Data Scientist &bull; Machine Learning Enthusiast</p>
+            <p class="resume-sheet-contact">ab1790197@gmail.com &bull; github.com/arpit4baj &bull; linkedin.com/in/arpit-bajpai-257308213</p>
+          </header>
+
+          <hr class="resume-rule">
+
+          <section class="resume-sheet-section">
+            <h3 class="resume-sec-title">PROFILE</h3>
+            <p class="resume-sec-body">
+              Passionate Computer Science student with deep interest in data manipulation, exploratory analysis, and applied machine learning. Dedicated to translating messy datasets into interpretable models and clean narrative visualizations.
+            </p>
+          </section>
+
+          <section class="resume-sheet-section">
+            <h3 class="resume-sec-title">TECHNICAL SKILLS</h3>
+            <p class="resume-sec-body"><strong>Programming:</strong> Python, SQL, C++, HTML/CSS/JavaScript</p>
+            <p class="resume-sec-body"><strong>Libraries &amp; Frameworks:</strong> Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, XGBoost, LightGBM</p>
+            <p class="resume-sec-body"><strong>Core Competencies:</strong> Exploratory Data Analysis (EDA), Supervised Learning, Clustering, Data Cleaning, Statistical Testing, SHAP Analysis</p>
+            <p class="resume-sec-body"><strong>Tools:</strong> Jupyter Notebooks, Git, GitHub, VS Code, Google Colab</p>
+          </section>
+
+          <section class="resume-sheet-section">
+            <h3 class="resume-sec-title">PROJECT HIGHLIGHTS</h3>
+            <div class="resume-sheet-item">
+              <strong>Annual Music Listening Patterns: ML Model Analysis</strong>
+              <p>Clustered 10,400+ songs using K-Means and PCA to map behavioral trends and mood patterns across seasonal data.</p>
+            </div>
+            <div class="resume-sheet-item">
+              <strong>City of Breath: Urban Air Quality Study</strong>
+              <p>Forecasted localized PM2.5 and PM10 pollution levels using spatial regression and XGBoost, achieving 0.91 R² accuracy.</p>
+            </div>
+            <div class="resume-sheet-item">
+              <strong>Who Will Leave: Telecom Customer Churn Classifier</strong>
+              <p>Engineered predictive churn model with LightGBM and explainable AI (SHAP), tuning decision thresholds for business impact.</p>
+            </div>
+          </section>
+
+          <section class="resume-sheet-section">
+            <h3 class="resume-sec-title">EDUCATION</h3>
+            <div class="resume-sheet-item">
+              <strong>B.Tech in Computer Science &amp; Engineering</strong>
+              <p>Shri Ramswaroop Memorial College of Engineering and Management &bull; Expected Graduation 2028</p>
+            </div>
+            <div class="resume-sheet-item">
+              <strong>City Convent School, Lucknow</strong>
+              <p>Schooling</p>
+            </div>
+          </section>
+
+          <div class="resume-sheet-actions">
+            <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Floating AI Guide Trigger Pill -->
+  <button type="button" class="floating-ai-guide-pill" id="floatingAiGuideBtn" aria-label="Open AI Assistant Guide">
+    <span class="guide-sparkle">✦</span>
+    <span>AI Guide</span>
+  </button>
+
+  <!-- ================= AI ASSISTANT SLIDE-OUT DRAWER ================= -->
+  <div class="ai-drawer-backdrop" id="aiDrawerBackdrop">
+    <aside class="ai-assistant-drawer" id="aiAssistantDrawer" role="dialog" aria-label="Arpit's Portfolio AI Assistant">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <div class="ai-status-dot"></div>
+          <h3 class="drawer-title">Arpit's AI Guide</h3>
+        </div>
+        <button type="button" class="drawer-close-btn" id="closeAiDrawerBtn" aria-label="Close AI Assistant">&times;</button>
+      </div>
+
+      <!-- Conversation History -->
+      <div class="drawer-messages-body" id="drawerMessagesBody">
+        <div class="chat-bubble chat-bubble-assistant">
+          Hello! I'm Arpit's portfolio assistant. I can answer questions about his machine learning pipelines, AI automation with n8n, deep learning research, or navigate you directly to relevant projects. How can I help?
+        </div>
+      </div>
+
+      <!-- Quick Chip Suggestions -->
+      <div class="drawer-chips-wrap">
+        <button type="button" class="chip-btn" data-drawer-prompt="What projects have you built?">Projects overview</button>
+        <button type="button" class="chip-btn" data-drawer-prompt="Show me your ML projects.">Machine Learning</button>
+        <button type="button" class="chip-btn" data-drawer-prompt="Tell me about your AI automation projects.">n8n Automation</button>
+        <button type="button" class="chip-btn" data-drawer-prompt="What is your strongest project?">Strongest project</button>
+        <button type="button" class="chip-btn" data-drawer-prompt="Why should I hire you?">Why hire Arpit?</button>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="drawer-input-area">
+        <input type="text" class="drawer-text-input" id="drawerTextInput" placeholder="Ask a question or request navigation..." autocomplete="off">
+        <button type="button" class="drawer-send-btn" id="drawerSendBtn">Send</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
